@@ -1,0 +1,158 @@
+#front-page {
+    > h2 {
+        font-size: 48px;
+        text-align: center;
+    }
+    #setup-in-mins {
+        @include flex-column();
+        line-height: 29px;
+        min-height: 100vh;
+        .cta {
+            background-color: rgba(85,89,93,0.8);
+            background-radius: 26px;
+            text-transform: uppercase;
+            &:hover {
+                background-color: $color__background-footer;
+            }
+        }
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+    #zero-footprint {
+        color: $color__text-hero;
+        font-family: Cabin, sans-serif;
+        min-height: 100vh;
+        width: 100%;
+        .underlay {
+            background-color: rgba(0,0,0,0.5);
+            text-align: center;
+            p {
+                font-family: Open Sans, sans-serif;
+            }
+        }
+    }
+    .cta {
+        background-color: $color__zyber-highlight-red;
+        border: none;
+        font-family: Raleway, sans-serif;
+        font-size: 22px;
+        height: 60px;
+        min-width: 300px;
+        padding: 0;
+        transition: all 0.3s;
+        width: 30%;
+        a {
+            color: #fff;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &:hover {
+            background-color: rgba(236,72,59,0.8);
+        }
+    }
+    .tri-icon {
+        font-size: 20vw;
+        list-style: none;
+        margin: 18px 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        li {
+            display: inline-block;
+            padding: 0 4%;
+        }
+    }
+}
+
+@include respond-to(mobile) {
+    #setup-in-mins {
+        min-height: 100vh;
+        padding: 20% 2.5rem;
+        h2 {
+            text-align: center;
+        }
+    }
+    #zero-footprint {
+        background-image: url('img/stock_photos/zero-footprint-computer.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include flex-column();
+        h2 {
+            font-size: 9vw;
+        }
+        .sub-heading {
+            font-size: 4vw;
+        }
+        .underlay {
+            @include flex-column();
+            min-height: 100vh;
+            padding: 10% 2.5rem;
+            width: 100%;
+        }
+    }
+}
+
+@include respond-to(small) {
+    #setup-in-mins {
+        background-color: $color__zyber-triad-red;
+        color: #fff;
+        padding: 0 7%;
+        h2 {
+            font-family: Raleway, sans-serif;
+            font-size: 48px;
+        }
+        p {
+            line-height: 32px;
+        }
+        .tri-icon {
+            font-size: 12vw;
+        }
+    }
+    #zero-footprint {
+        background-color: $color__zyber-blue-dark;
+        @include flex-column();
+        justify-content: flex-end;
+        height: 100vh;
+        position: relative;
+        .underlay {
+            background-blend-mode: multiply;
+            background-image: url('img/stock_photos/zero-footprint-computer.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 50%;
+            padding: 5% 4% 2%;
+            width: 100%;
+            p {
+                font-size: 24px;
+            }
+        }
+        .underlay-content {
+            position: absolute;
+            left: 0;
+            margin: auto;
+            right: 0;
+            top: 4rem;
+            width: 100%;
+            h2 {
+                font-size: 5vw;
+            }
+        }
+    }
+}
+
+@include respond-to(medium) {
+    #setup-in-mins {
+        padding: 0 10%;
+        p {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+    #zero-footprint {
+        .underlay-content {
+            top: 2rem;
+        }
+    }
+}

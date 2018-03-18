@@ -1,0 +1,70 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+@mixin flex-column() {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin flex-row() {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+@mixin respond-to($breakpoint) {
+
+  @if $breakpoint == "mobile" {
+    @media (max-width: 766px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "mobile-up" {
+    @media (min-width: 0) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "small" {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

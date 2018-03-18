@@ -1,0 +1,23 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+@import "headings";
+
+@import "copy";
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,700');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
